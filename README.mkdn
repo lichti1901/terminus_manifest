@@ -1,0 +1,17 @@
+Welcome to my manifest for my new project "terminus rom".
+
+==========================================================
+
+repo init -u https://github.com/lichti1901/terminus_manifest.git -b lollipop
+
+Special thanks to:
+
+[@rascarlo](https://github.com/rascarlo) Owner of rastakat, mentor and a very good friend 
+
+[@SlimRoms](https://github.com/SlimRoms) 
+[@CyanogenMod](https://github.com/CyanogenMod) 
+[@omnirom](https://github.com/omnirom) 
+[@Mahdi-Rom](https://github.com/Mahdi-Rom)
+[@AOSPA](https://github.com/AOSPA)
+[@SimpleAOSP](https://github.com/SimpleAOSP)
+
