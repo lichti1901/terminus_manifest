@@ -7,11 +7,13 @@
            fetch="git://github.com/rascarlo/" /> 
   <remote name="lichti1901"
            fetch="git://github.com/lichti1901/" />
-  <default revision="refs/tags/android-5.0.0_r2"
+  <remote name="CyanogenMod"
+           fetch="git://github.com/CyanogenMod/" />
+  <default revision="refs/tags/android-5.0.0_r6"
            remote="aosp"
-           sync-j="4" />
+           sync-j="8" />
 
-  <project path="build" name="platform/build" groups="pdk,tradefed" >
+  <project path="build" name="android_build" groups="pdk,tradefed" remote="lichti1901" revision="lollipop" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
@@ -43,7 +45,7 @@
   <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" groups="device" />
   <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device" />
   <project path="device/google/atv" name="device/google/atv" groups="device,fugu" />
-  <project path="device/lge/hammerhead" name="device/lge/hammerhead" groups="device,hammerhead" />
+  <project path="device/lge/hammerhead" name="android_device_lge_hammerhead" groups="device,hammerhead" remote="lichti1901" revision="lollipop" />
   <project path="device/lge/hammerhead-kernel" name="device/lge/hammerhead-kernel" groups="device,hammerhead" clone-depth="1" />
   <project path="device/lge/mako" name="device/lge/mako" groups="device,mako" />
   <project path="device/lge/mako-kernel" name="device/lge/mako-kernel" groups="device,mako" clone-depth="1" />
@@ -65,6 +67,7 @@
   <project path="external/bluetooth/bluedroid" name="platform/external/bluetooth/bluedroid" groups="pdk" />
   <project path="external/bouncycastle" name="platform/external/bouncycastle" groups="pdk" />
   <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" />
+  <project path="external/busybox" name="android_external_busybox" remote="CyanogenMod" revision="cm-12.0" />
   <project path="external/bzip2" name="platform/external/bzip2" groups="pdk" />
   <project path="external/ceres-solver" name="platform/external/ceres-solver" groups="pdk-cw-fs" />
   <project path="external/checkpolicy" name="platform/external/checkpolicy" groups="pdk" />
@@ -273,7 +276,7 @@
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs" />
   <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
-  <project path="frameworks/base" name="platform/frameworks/base" groups="pdk-cw-fs" />
+  <project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs" remote="lichti1901" revision="lollipop" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
@@ -369,7 +372,7 @@
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
-  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="lichti1901" revision="lollipop" />
   <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" />
@@ -459,8 +462,8 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk,tradefed" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" groups="pdk-cw-fs" />
-  <project path="system/core" name="platform/system/core" groups="pdk" />
-  <project path="system/extras" name="platform/system/extras" groups="pdk" />
+  <project path="system/core" name="android_system_core" groups="pdk" remote="lichti1901" revision="lollipop" />
+  <project path="system/extras" name="android_system_extras" groups="pdk" remote="lichti1901" revision="lollipop" />
   <project path="system/keymaster" name="platform/system/keymaster" groups="pdk" />
   <project path="system/media" name="platform/system/media" groups="pdk" />
   <project path="system/netd" name="platform/system/netd" groups="pdk" />
@@ -480,5 +483,6 @@
   <project path="tools/studio/translation" name="platform/tools/studio/translation" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
+  <project path="vendor" name="android_vendor" remote="lichti1901" revision="lollipop" />
 
 </manifest>
