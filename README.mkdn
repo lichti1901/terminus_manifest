@@ -2,7 +2,7 @@ Welcome to my manifest for my new project "terminus rom".
 
 ==========================================================
 
-repo init -u https://github.com/lichti1901/terminus_manifest.git -b lollipop
+repo init -u https://github.com/lichti1901/terminus_manifest.git -b lollipop-5.1
 
 Special thanks to:
 
