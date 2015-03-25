@@ -509,6 +509,7 @@
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
   <project path="vendor/terminus" name="android_vendor_terminus" remote="lichti1901" revision="lollipop-5.1" />
   <project path="vendor/lge/hammerhead" name="vendor_lge_hammerhead" remote="lichti1901" revision="lollipop-5.1" />
+  <project path="vendor/lge/mako" name="vendor_lge_mako" remote="lichti1901" revision="lollipop-5.1" />
   <project path="vendor/moto/shamu" name="vendor_moto_shamu" remote="lichti1901" revision="lollipop-5.1" />
 
 </manifest>
